@@ -1,0 +1,104 @@
+:root {
+    --color-pink: #f28ab2;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #222;
+    background-color: var(--color-pink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    padding: 3.8rem;
+    margin: auto;
+    background-color: white;
+    /* height: 80vh; */
+    width: 50vw;
+    margin: 10rem auto;
+    box-shadow: 0px 3px 15px 7px rgba(0, 0, 0, 0.29);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.person button {
+    margin-left: auto;
+}
+
+.info {
+    margin: 0 2rem;
+}
+
+.dismiss {
+    color: #888;
+}
+
+.image-container {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    overflow: hidden;
+    object-position: 50% 30%;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.dismiss {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    transition: all 0.27s;
+}
+
+.dismiss:hover {
+    background-color: #ccc;
+}
+
+.dismiss:active {
+    outline: none;
+    transform: translateY(2px);
+}
