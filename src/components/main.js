@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Person from "./person";
 
 export default function () {
     let [data, setData] = useState([
@@ -41,30 +42,16 @@ export default function () {
             <h1>{birthdaysToday} Birthdays Today</h1>
             {data.map(function (person) {
                 return (
-                    <div className="person" id={`person--${person.id}`}>
-                        <div className="image-container">
-                            <img
-                                src={person.image}
-                                alt=""
-                                className={`image
-                                `}
-                            />
-                        </div>
-                        <div className="info">
-                            <h2 className="name">{person.firstName}</h2>
-                            <h3 className="age">{person.age}</h3>
-                        </div>
-                        <button
-                            type="button"
-                            className="dismiss"
-                            onClick={function () {
-                                setData(data.filter((p) => person.id !== p.id));
-                                setBirthdaysToday(birthdaysToday - 1);
-                            }}
-                        >
-                            DISMISS
-                        </button>
-                    </div>
+                    <Person
+                        id={person.id}
+                        image={person.image}
+                        firstName={person.firstName}
+                        age={person.age}
+                        birthdaysToday={birthdaysToday}
+                        setBirthdaysToday={setBirthdaysToday}
+                        data={data}
+                        setData={setData}
+                    ></Person>
                 );
             })}
         </main>
